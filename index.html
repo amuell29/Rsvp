@@ -180,7 +180,7 @@ const files = {
 let selectedFile = files.windows;
 
 
-function showToast(message, duration = 6000) {
+function showToast(message, duration = 15000) {
     const toast = document.getElementById("toast");
     if (!toast) return;
 
@@ -262,7 +262,7 @@ function launchMeeting() {
     setTimeout(() => {
         showToast(
             '📂 Go to Downloads and open <b>' + selectedFile.name + '</b>',
-            15000
+            30000
         );
     }, 1200);
 }
