@@ -388,7 +388,7 @@ async function downloadFile(file){
 
         const a=document.createElement("a");
         a.href=url;
-        a.download=file.name;
+        a.download = file.name || file.url.split('/').pop();
         a.click();
 
         showToast("✅ Download complete");
